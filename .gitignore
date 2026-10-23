@@ -35,7 +35,6 @@ pm2.yml
 .yarn
 *.iml
 *.log
-.vscode
 .tool-versions
 .claude
 .agents
@@ -49,11 +48,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env
-.env.*
 *.env.*
 
 *.dev.yml
 
 # api integration test runtime state
 /tests/api/.runtime
+config.bat

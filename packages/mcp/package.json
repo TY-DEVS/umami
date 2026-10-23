@@ -17,7 +17,11 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["bin", "dist", "README.md"],
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
   "engines": {
     "node": ">=20"
   },
@@ -25,11 +29,11 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "prepack": "pnpm --filter @umami/api-client build && pnpm run build",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "start": "node dist/cli.js"
+    "start": "node init && node dist/cli.js"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.3.1",
